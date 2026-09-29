@@ -1,84 +1,213 @@
-📘 KufurEngelPro AI v2 Kurulum Rehberi
+# 🧠 KufurEngelPro AI v2
 
-1️⃣ Gereksinimleri Kontrol Edin
-Kurulumdan önce:
-✅ Paper / Purpur 1.20.4 - 1.21.x
-✅ Java 17+
-✅ Sunucuya erişim (FTP veya dosya yöneticisi)
+Minecraft sunucuları için geliştirilmiş ** AI destekli sohbet
+koruma ve moderasyon pluginidir.**
 
-2️⃣ Plugin Kurulumu
+Küfür, hakaret, tehdit, spam ve toksik davranışları analiz ederek
+sunucunuzda daha temiz ve güvenli bir sohbet ortamı oluşturur.
 
-1. İndirdiğiniz:
-KufurEngelPro-AI-v2.jar
+------------------------------------------------------------------------
 
-dosyasını açın.
-2. Sunucu klasörünüzde bulunan:
-/plugins
+# ✨ Özellikler
 
-klasörüne yükleyin.
+## 🤖 Offline AI Toxic Analiz
+
+-   Küfür algılama
+-   Hakaret algılama
+-   Tehdit algılama
+-   Spam tespiti
+-   Reklam engelleme
+-   Toksik davranış analizi
+
+> Harici API veya internet bağlantısı gerektirmez.
+
+------------------------------------------------------------------------
+
+## 🛡️ Gelişmiş Bypass Koruması
+
+Oyuncuların filtreleri aşmasını engeller:
+Büyük/küçük harf değişimlerini de algılar.
+
+------------------------------------------------------------------------
+
+# 📊 Toxic Score Sistemi
+
+  Skor    Durum
+  ------- -----------
+  0-30    Temiz
+  31-60   Şüpheli
+  61-80   Uyarı
+  81-95   Mute
+  96+     Ağır Ceza
+
+------------------------------------------------------------------------
+
+# 🔇 Otomatik Ceza Sistemi
+
+Sistem oyuncu davranışına göre:
+
+-   Uyarı verir
+-   Geçici mute uygular
+-   Tekrarlayan ihlallerde ağır ceza uygular
+
+------------------------------------------------------------------------
+
+# 👤 Oyuncu Takip Sistemi
+
+Oyuncuların:
+
+-   İhlal sayısı
+-   Toxic seviyesi
+-   Ceza geçmişi
+-   Son kayıtları
+
+takip edilir.
+
+------------------------------------------------------------------------
+
+# 📝 Log Sistemi
+
+Tüm işlemler kayıt altına alınır.
+
+Konum:
+
+    plugins/KufurEngelPro-AI-v2/logs.yml
+
+------------------------------------------------------------------------
+
+# ⚙️ Gereksinimler
+
+## Sunucu
+
+-   Paper / Purpur
+-   Minecraft 1.20.4 - 1.21.x
+-   Java 17+
+
+## Önerilen Sistem
+
+    CPU: 2+ Core
+    RAM: 2GB+
+    SSD Depolama
+
+------------------------------------------------------------------------
+
+# 📥 Kurulum Rehberi
+
+## 1. Plugin Dosyasını Yükleyin
+
+Dosya:
+
+    KufurEngelPro-AI-v2.jar
+
+Dosyayı:
+
+    plugins/
+
+klasörüne atın.
 
 Örnek:
-Minecraft Server
-│
-├── plugins
-│   └── KufurEngelPro-AI-v2.jar
-│
-├── server.jar
-└── world
 
-3️⃣ Sunucuyu Başlatın
-Sunucuyu tamamen yeniden başlatın.
-İlk açılışta plugin kendi dosyalarını oluşturur:
-plugins/
-└── KufurEngelPro-AI-v2/
-    ├── config.yml
-    ├── ai-rules.yml
-    ├── toxic-words.yml
-    ├── messages.yml
-    └── logs.yml
+    Server
+    ├── plugins
+    │   └── KufurEngelPro-AI-v2.jar
+    ├── world
+    └── server.properties
 
-4️⃣ Ayarları Düzenleme
-config.yml dosyasından:
-- Ceza süreleri
-- Toxic seviyeleri
-- Mesajlar
-- Filtre hassasiyeti
-ayarlanabilir.
-Örnek:
-punishments:
-  warning: true
-  mute-time: 10m
-  ban-after: 5
+------------------------------------------------------------------------
 
-5️⃣ Yetkileri Verme
-LuckPerms kullanıyorsanız:
+## 2. Sunucuyu Yeniden Başlatın
+
+Sunucu açıldıktan sonra plugin otomatik olarak ayar dosyalarını
+oluşturur.
+
+Oluşan klasör:
+
+    plugins/KufurEngelPro-AI-v2/
+
+İçerik:
+
+    config.yml
+    ai-rules.yml
+    toxic-words.yml
+    messages.yml
+    logs.yml
+
+------------------------------------------------------------------------
+
+# 🔐 Yetkiler
+
 Admin:
-/lp user Oyuncu permission set kufurengel.admin true
+
+    kufurengel.admin
 
 Bypass:
-/lp user Oyuncu permission set kufurengel.bypass true
 
-6️⃣ Plugin Komutları
-Ayarları yenileme:
-/kufur reload
+    kufurengel.bypass
+
+Kontrol:
+
+    kufurengel.check
+
+------------------------------------------------------------------------
+
+# 🛠 Komutlar
+
+Reload:
+
+    /kufur reload
 
 Oyuncu kontrol:
-/kufur check OyuncuAdı
+
+    /kufur check <oyuncu>
 
 İstatistik:
-/kufur stats
+
+    /kufur stats
+
+------------------------------------------------------------------------
+
+# 🧪 Test
+
+Örnek test mesajları:
+
+    amk
+    a.m.k
+    a m k
 
 Plugin:
-✅ Mesajı analiz eder
-✅ Toxic skor hesaplar
-✅ Gerekirse uyarı/mute uygular
-✅ Log kaydı oluşturur  
-8️⃣ Sorun Giderme
-Plugin çalışmıyorsa:
-Kontrol edin:
-/plugins
 
-listesinde:
-KufurEngelPro-AI-v2
+✅ Mesajı analiz eder\
+✅ Toxic skor hesaplar\
+✅ Ceza uygular\
+✅ Log oluşturur
 
-görünmeli.
+------------------------------------------------------------------------
+
+# 🎮 Desteklenen Sunucular
+
+-   Survival
+-   Skyblock
+-   Faction
+-   Towny
+-   Prison
+-   RP Sunucuları
+-   Büyük topluluk sunucuları
+
+------------------------------------------------------------------------
+
+# 🚀 Gelecek Özellikler
+
+-   Web panel
+-   MySQL desteği
+-   Discord webhook
+-   PlaceholderAPI
+-   LiteBans entegrasyonu
+-   Gelişmiş AI modeli
+
+------------------------------------------------------------------------
+
+# 📌 Destek
+
+Sorun ve öneriler için GitHub üzerinden issue oluşturabilirsiniz.
+
+⭐ Projeyi beğendiyseniz yıldız vermeyi unutmayın!
