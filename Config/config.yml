@@ -1,0 +1,7 @@
+AI:
+  enabled: true
+  warning-score: 60
+  mute-score: 80
+  ban-score: 95
+Punishments:
+  mute-minutes: 30

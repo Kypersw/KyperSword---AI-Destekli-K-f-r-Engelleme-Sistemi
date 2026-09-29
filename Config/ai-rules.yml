@@ -1,0 +1,5 @@
+rules:
+  repeated-letters: true
+  symbol-bypass: true
+  space-bypass: true
+  leetspeak: true
