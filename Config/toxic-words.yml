@@ -1,6 +1,131 @@
-words:
-  - amk
-  - aq
-  - mk
-  - fuck
-  - shit
+# KufurEngelPro AI v2
+# Toxic Word Database
+
+categories:
+
+  # Hafif hakaretler
+  low:
+    - aptal
+    - salak
+    - gerizekali
+    - geri zekali
+    - cahil
+    - ezik
+    - beceriksiz
+    - mal
+    - saf
+    - komik
+    - zavalli
+    - acemi
+
+  # Ağır hakaretler
+  medium:
+    - serefsiz
+    - terbiyesiz
+    - karaktersiz
+    - onursuz
+    - haysiyetsiz
+    - yalanci
+    - sahtekar
+    - iki yuzlu
+    - igrenc
+    - rezil
+
+  # Küfür ifadeleri
+  profanity:
+    - amk
+    - aq
+    - amq
+    - mk
+    - amina
+    - aminakoyim
+    - aminakoyayim
+    - sik
+    - siktir
+    - sikik
+    - sikim
+    - sokuk
+    - yarak
+    - yarrak
+    - yarram
+    - tassak
+    - tassakli
+    - got
+    - gotveren
+    - götveren
+    - pic
+    - piç
+    - oç
+    - orospu
+    - orospu cocugu
+
+  # İngilizce toxic kelimeler
+  english:
+    - fuck
+    - fucking
+    - fucked
+    - shit
+    - bullshit
+    - bitch
+    - asshole
+    - bastard
+    - dick
+    - dickhead
+    - pussy
+    - motherfucker
+    - cunt
+    - idiot
+    - stupid
+    - dumb
+
+  # Tehdit ifadeleri
+  threats:
+    - oldururum
+    - geber
+    - seni oldururum
+    - hesaplasiriz
+    - bulurum seni
+    - pisman ederim
+    - seni bitiririm
+    - gorursun
+    - seni yakalarim
+
+  # Spam / reklam
+  spam:
+    - join my server
+    - discord.gg
+    - minecraft server ip
+    - bedava vip
+    - ucretsiz vip
+    - takip et
+    - abone ol
+
+  # Toxic davranış kalıpları
+  toxic_patterns:
+    - eziksin
+    - hicbir seyi beceremezsin
+    - kimse seni sevmiyor
+    - sunucudan git
+    - oynama artik
+    - herkes senden nefret ediyor
+
+
+# Algılama ayarları
+
+settings:
+
+  normalize:
+    remove_spaces: true
+    remove_symbols: true
+    lowercase: true
+    detect_numbers: true
+
+  similarity:
+    enabled: true
+    threshold: 80
+
+  punishment_score:
+
+    warning: 60
+    mute: 80
+    ban: 95
